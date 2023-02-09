@@ -75,4 +75,56 @@ class UserInputs:
             response = input("Would you like to try again? (y/n): ")
             if response == 'y' or 'Y':
                 get_user_location_preference(self)
+    
+    
+    def get_user_radius_preference():
+        """Prompts user for their radius preference in miles."""
+        self._radius = int(input("Within what radius? (in miles): "))
 
+
+    def get_user_events_sorting_preference():
+        """Prompts user for their preference on how the events should be sorted"""
+        response = input("What field should the events be sorted by? (datetime_utc, datetime_local, announce_date, id, score): ")
+        
+        for field in self._events_sorting:
+            if response == field:
+                self._events_sorting[field] = True
+            elif response != field:
+                self._events_sorting[field] = False
+        
+        response = input("In ascending or descending order?")
+        
+        if response == "ascending":
+            self._events_sorting["direction"]["ascending"] = True
+            self._events_sorting["direction"]["descending"] = False
+            
+    def get_user_performers_sorting_preference():
+        """Prompts user for their preference on how the events should be sorted"""
+        response = input("What field should the performers be sorted by? (datetime_utc, datetime_local, announce_date, id, score): ")
+        
+        for field in self._events_sorting:
+            if response == field:
+                self._events_sorting[field] = True
+            elif response != field:
+                self._events_sorting[field] = False
+        
+        response = input("In ascending or descending order?")
+        
+        if response == "ascending":
+            self._events_sorting["direction"]["ascending"] = True
+            self._events_sorting["direction"]["descending"] = False
+    
+    
+    def get_user_preferences(self):
+        """Returns dict of user's preferences"""
+        user_preferences = {}
+        
+        user_preferences["event type"] = self._event_type
+        user_preferences["location"] = self._location
+        user_preferences["radius"] = self._radius
+        user_preferences["events_sorting"] = self._events_sorting
+        user_preferences["performers_sorting"] = self._performers_sorting
+        
+        return user_preferences
+
+        
