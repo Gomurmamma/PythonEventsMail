@@ -1,5 +1,9 @@
-# Email template
-template = """"
+"""
+html Email template
+"""
+
+template = (
+    """"
 <html>
 <head><title> Featured Events for {{ month0 }}, {{ day0 }} </title></head>
 <body>
@@ -96,4 +100,6 @@ template = """"
 </figure>
 </body>
 </html>
-"""""
+"""
+    ""
+)

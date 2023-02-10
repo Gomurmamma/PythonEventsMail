@@ -1,3 +1,6 @@
+"""
+Defines the UserInputs class for collecting user's event preferences
+"""
 import os
 from dotenv import load_dotenv, find_dotenv
 import requests
@@ -42,7 +45,8 @@ class UserInputs:
         load_dotenv(find_dotenv())
         geocoding_api_key = os.getenv("geocoding_api_key")
         
-        location_str = f"{location_details['city']}%20{location_details['state']}%20{location_details['zipcode']}%20{location_details['country']}&apiKey={geocoding_api_key}"
+        location_str = (f"{location_details['city']}%20{location_details['state']}"
+        f"%20{location_details['zipcode']}%20{location_details['country']}&apiKey={geocoding_api_key}")
 
         url = "https://api.geoapify.com/v1/geocode/search?text=" + location_str
         
@@ -56,7 +60,7 @@ class UserInputs:
             data = response.json()
             self._location["lat"] = data["features"][0]["geometry"]["coordinates"][1]
             self._location["lon"] = data["features"][0]["geometry"]["coordinates"][0]
-        except HTTPError:
+        except Exception as e:
             print("There was an error with the City, State, or zipcode you enetered.")
             response = input("Would you like to try again? (y/n): ")
             if response == 'y' or 'Y':

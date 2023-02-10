@@ -1,6 +1,9 @@
-from EventEmail import EventEmail
-from EventRequests import EventsRequest
-from UserInputs import UserInputs
+"""
+Defines the Python Events Mail cli
+"""
+from event_email import EventEmail
+from events_request import EventsRequest
+from user_inputs import UserInputs
 
 def main():
     """Calls the CLI sequence for sending an email of events of specified preference"""
@@ -24,3 +27,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
