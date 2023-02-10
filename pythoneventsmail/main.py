@@ -1,9 +1,15 @@
 """
-Defines the Python Events Mail cli
+Defines the Python Events Mail cli.
+Program asks user for their event preferences and then makes a request
+to the SeatGeek API for events matching their criteria.
+Program then takes the SeatGeek API data and inserts it to a prepared 
+HTML template before mailing the information to the email specified
+in the .env file
 """
 from event_email import EventEmail
 from events_request import EventsRequest
 from user_inputs import UserInputs
+
 
 def main():
     """Calls the CLI sequence for sending an email of events of specified preference"""
@@ -25,6 +31,6 @@ def main():
 
     email_message.send_email()
 
+
 if __name__ == "__main__":
     main()
-    

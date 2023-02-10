@@ -136,8 +136,10 @@ class EventEmail:
         start = time.time()
         try:
             smtp_ssl = smtplib.SMTP_SSL(host="smtp.gmail.com")
-        except Exception as e:
-            print("ErrorType : {}, Error : {}".format(type(e).__name__, e))
+        except Exception as new_error:
+            print(
+                "ErrorType : {}, Error : {}".format(type(new_error).__name__, new_error)
+            )
             smtp_ssl = None
 
         print("Connection Object : {}".format(smtp_ssl))
