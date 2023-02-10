@@ -39,8 +39,6 @@ class EventEmail:
 
         html_template = HtmlTemplate()
 
-        print("EVENTS LIST: ", events_list)
-
         # Create html message from the template and then the values from each event
         events_html = MIMEText(
             Environment()

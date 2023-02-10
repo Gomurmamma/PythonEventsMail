@@ -1,8 +1,3 @@
-"""
-Defines html Email template class
-"""
-
-
 class HtmlTemplate:
     """Represents an object with the html template constant for email"""
 
