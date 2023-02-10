@@ -1,3 +1,6 @@
+"""
+Defines EventsEmail object for sending events data with the given HTML template
+"""
 import os
 import smtplib
 import time
@@ -5,7 +8,7 @@ from email.message import EmailMessage
 from email.mime.text import MIMEText
 from jinja2 import Environment
 from dotenv import load_dotenv, find_dotenv
-from html_template import template
+import template
 
 
 class EventEmail:
@@ -39,7 +42,7 @@ class EventEmail:
         # Create html message from the template and then the values from each event
         events_html = MIMEText(
             Environment()
-            .from_string(html_template.template)
+            .from_string(template)
             .render(
                 title0=events_list[0]["formatted_title"],
                 ticket_url0=events_list[0]["formatted_ticket_url"],

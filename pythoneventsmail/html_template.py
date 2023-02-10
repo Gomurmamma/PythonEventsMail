@@ -2,7 +2,7 @@
 html Email template
 """
 
-template = (
+TEMPLATE = (
     """"
 <html>
 <head><title> Featured Events for {{ month0 }}, {{ day0 }} </title></head>
