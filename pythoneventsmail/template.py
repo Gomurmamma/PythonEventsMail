@@ -1,9 +1,13 @@
 """
-html Email template
+Defines html Email template class
 """
 
-TEMPLATE = (
-    """"
+
+class HtmlTemplate:
+    """Represents an object with the html template constant for email"""
+
+    TEMPLATE = (
+        """"
 <html>
 <head><title> Featured Events for {{ month0 }}, {{ day0 }} </title></head>
 <body>
@@ -101,5 +105,5 @@ TEMPLATE = (
 </body>
 </html>
 """
-    ""
-)
+        ""
+    )

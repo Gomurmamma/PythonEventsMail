@@ -6,9 +6,9 @@ import smtplib
 import time
 from email.message import EmailMessage
 from email.mime.text import MIMEText
+from template import HtmlTemplate
 from jinja2 import Environment
 from dotenv import load_dotenv, find_dotenv
-import template
 
 
 class EventEmail:
@@ -37,12 +37,14 @@ class EventEmail:
         # EVENTS LIST
         events_list = self._events
 
+        html_template = HtmlTemplate()
+
         print("EVENTS LIST: ", events_list)
 
         # Create html message from the template and then the values from each event
         events_html = MIMEText(
             Environment()
-            .from_string(template)
+            .from_string(html_template.TEMPLATE)
             .render(
                 title0=events_list[0]["formatted_title"],
                 ticket_url0=events_list[0]["formatted_ticket_url"],
