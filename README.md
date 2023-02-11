@@ -2,7 +2,7 @@
 
 This is a submission for the OSU Hackathon Fall 2022.
 
-2/10/2023 - This project has been refactored to demonstrate OOP.
+2/10/2023 - This project has been refactored as a demonstration of OOP and programming course work fundamentals. The script now takes user input for event preferences before making the SeatGeek API request, importing the data to the html template, and emailing the file.
 
 ## Table of contents
 
@@ -19,7 +19,7 @@ This is a submission for the OSU Hackathon Fall 2022.
 
 ## Overview
 
-Oregon State University(OSU) Hackathon club put togeather "Beaver Hacks Fall 2022." The event was set up to help students learn new skills, build cool stuff, and compete for prizes. Our team concisted of two new students to the OSU Computer Science post bacc program and competed in the new student catagory. The prompt of the Hackathon was "Life Hacks" and the goal was to build a program that fits this prompt in three days.
+Oregon State University (OSU) Hackathon club put togeather "Beaver Hacks Fall 2022." The event was set up to help students learn new skills, build cool stuff, and compete for prizes. Our team concisted of two new students to the OSU Computer Science post bacc program and competed in the new student catagory. The prompt of the Hackathon was "Life Hacks" and the goal was to build a program that fits this prompt in three days.
 
 ## The Challenge
 
@@ -27,7 +27,7 @@ Based on the prompt our team wanted to pursue a project geared towards automatin
 
 ## Screenshots
 
-![Script Execution Preview](Images/gif_of_execution.gif)
+![Script Execution Preview](Images/PythonEventsDemo.gif)
 
 ## Built With
 
@@ -39,21 +39,16 @@ Based on the prompt our team wanted to pursue a project geared towards automatin
 
 ## Lessons Learned
 
-- How to make simple API requests
-- Sending email from a python program
-- Basic HTML formatting
-- Using Git and Github in a team enviornment
+- How to make API requests with Python
+- Sending email
+- Formatting HTML
+- Using Git and Github in a team environment
 
 ## Continued development
 
 In the future we would like to return and implement the following
 
 - Using Time benchmarks to indicate script speed following program edits
-- CSS styling
-- API requests for other event types like comedy, sports, etc.
-- Deployment to PythonAnywhere & automating script call once API url has been whitelisted.
-- Web application for signing up for an email based on user's event preferences.
-  Python script will make a request to user address & preferences endpoint and send emails.
 
 ## Usefull resources
 
