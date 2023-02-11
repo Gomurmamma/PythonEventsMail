@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=64.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name="Python Events Mail"
+version="0.0.1"
+description="A script for sending live event information to email"
+readme="README.md"
+authors=[{name="Donald Antonio Young"}]
+
+[project.scripts]
+pythoneventsmail = "pythoneventsmail.EventsMail:main"
